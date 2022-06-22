@@ -7,4 +7,5 @@
 2. This means all your object and function declarations need to remain in a state that does not care about from whence they came.
 3. Pure declarations can be declared and interpreted in any order without affecting other pure declarations to give rise to this effect.
 4. Finally, associations can be interpreted sequentially for state machine declarations and sequential declarations
-5. Diagrams can be built in layers and then re-orderd for sequential associations  
+5. Diagrams can be built in layers and then re-orderd for sequential associations
+6. This only happens if Hydra's Interpreter separates the sequential logic interpretations from object, function, and state transition interpretations   
