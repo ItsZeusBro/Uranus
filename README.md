@@ -50,89 +50,97 @@
 |                      |                         [[]]                         |                                                    |                             |                             |
 
 ## Basic Example:
-    //Uranus syntax in hydra file
     {
-      {
+      //Uranus syntax in hydra file
+      Uranus:{
+        {
+          objName1:{
+            sym: [[]],
+            ass:[
+              {
+                sym: ("1")->>,
+                to: objName2 
+              },
+              {
+                sym: ("1..2")_>>,
+                to: objName3
+              }
+            ]
+          }
+        },
+        {
+          objName2:{
+            sym: [[]],
+            ass:[
+              {
+                sym: ("1..n")-("<<strong like bull>>")->,
+                to: objName1 
+              },
+              {
+                sym: ("2..3")_>,
+                to: objName3
+              }
+            ]
+          }
+        },
+          objName3:{
+            sym: [[]],
+            ass:[
+              {
+                sym: ("1")_,
+                to: objName1 
+              },
+              {
+                sym: ("2")_>>,
+                to: objName2
+              }
+            ]
+          }
+        }
+        output:{
+          //When Hydra Engine reads this whole file, Hydra will use Uranus plugin to evaluate its stringified 
+          //output (in this case HTML) and place it here for other plugins to play with and possibly extend 
+          //the plugin's evaluated output. Some plugins allow the evaluation to be extended, whereas others only
+          //let you extend the output. Hydra's api allows you to use abstract pipeline logic to create these plugins
+          //or you can create your own evaluation code in any language you want.
+        }
+      }
+
+      //Native Hydra Objects
+      Hydra:{
         objName1:{
-          sym: [[]],
-          ass:[
-            {
-              sym: ("1")->>,
-              to: objName2 
-            },
-            {
-              sym: ("1..2")_>>,
-              to: objName3
-            }
-          ]
-        }
-      },
-      {
+          type: "Class",
+          props:{
+            size: "10",
+            desc: "small thing"
+          },
+          methods:{
+            size: get_size()
+
+          }
+
+        },
         objName2:{
-          sym: [[]],
-          ass:[
-            {
-              sym: ("1..n")-("<<strong like bull>>")->,
-              to: objName1 
-            },
-            {
-              sym: ("2..3")_>,
-              to: objName3
-            }
-          ]
-        }
-      },
-
+          type: "Class",
+          props:{
+            size: "14",
+            desc: "strong thing"
+          },
+          methods:{
+            strength: get_strength()
+          }
+        },
         objName3:{
-          sym: [[]],
-          ass:[
-            {
-              sym: ("1")_,
-              to: objName1 
-            },
-            {
-              sym: ("2")_>>,
-              to: objName2
-            }
-          ]
+          type: "Class",
+          props:{
+            size: "18",
+            desc: "weighty thing"
+          },
+          methods:{
+            weight: get_weight()
+          }
         }
-      }
-    }
-    
-    //Native Hydra Objects
-    {
-      objName1:{
-        type: "Class",
-        props:{
-          size: "10",
-          desc: "small thing"
-        },
-        methods:{
-          size: get_size()
 
-        }
-        
-      },
-      objName2:{
-        type: "Class",
-        props:{
-          size: "14",
-          desc: "strong thing"
-        },
-        methods:{
-          strength: get_strength()
-        }
-      },
-      objName3:{
-        type: "Class",
-        props:{
-          size: "18",
-          desc: "weighty thing"
-        },
-        methods:{
-          weight: get_weight()
-        }
       }
-      
-    }
+    {
 ![ClassDiagram](https://user-images.githubusercontent.com/107733608/175196038-ac5a58a5-074f-4752-b475-04a7f6361144.png)
