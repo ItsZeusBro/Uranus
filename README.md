@@ -57,11 +57,11 @@
           sym: [[]],
           ass:[
             {
-              sym: ("1")->,
+              sym: ("1")->>,
               to: objName2 
             },
             {
-              sym: ("1..2")_>,
+              sym: ("1..2")_>>,
               to: objName3
             }
           ]
@@ -72,7 +72,7 @@
           sym: [[]],
           ass:[
             {
-              sym: ("1..n")-,
+              sym: ("1..n")-("<<strong like bull>>")->,
               to: objName1 
             },
             {
@@ -87,11 +87,11 @@
           sym: [[]],
           ass:[
             {
-              sym: ("1")_>,
+              sym: ("1")_,
               to: objName1 
             },
             {
-              sym: ("2")_,
+              sym: ("2")_>>,
               to: objName2
             }
           ]
@@ -105,10 +105,10 @@
         type: "Class",
         props:{
           size: "10",
-          desc: "some thing small"
+          desc: "small thing"
         },
         methods:{
-          get_size()
+          size: get_size()
 
         }
         
@@ -117,21 +117,25 @@
         type: "Class",
         props:{
           size: "14",
-          desc: "something strong"
+          desc: "strong thing"
         },
         methods:{
-          get_strength()
+          strength: get_strength()
         }
       },
       objName3:{
         type: "Class",
         props:{
           size: "18",
-          desc: "something big"
+          desc: "weighty thing"
         },
         methods:{
-          get_weight()
+          weight: get_weight()
         }
       }
       
     }
+    
+    
+
+![Screenshot from 2022-06-22 22-33-45](https://user-images.githubusercontent.com/107733608/175194777-b834b565-48e5-41f0-954b-d09f7683ef82.png)
