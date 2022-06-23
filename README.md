@@ -48,3 +48,90 @@
 |                      |                       [[[]]]                         |                                                    |                             |                             |
 |       **Rectangle**  |                                                      |                                                    |                             |                             |
 |                      |                         [[]]                         |                                                    |                             |                             |
+
+## Basic Example:
+    //Uranus syntax in hydra file
+    {
+      {
+        objName1:{
+          sym: [[]],
+          ass:[
+            {
+              sym: ("1")->,
+              to: objName2 
+            },
+            {
+              sym: ("1..2")_>,
+              to: objName3
+            }
+          ]
+        }
+      },
+      {
+        objName2:{
+          sym: [[]],
+          ass:[
+            {
+              sym: ("1..n")-,
+              to: objName1 
+            },
+            {
+              sym: ("2..3")_>,
+              to: objName3
+            }
+          ]
+        }
+      },
+
+        objName3:{
+          sym: [[]],
+          ass:[
+            {
+              sym: ("1")_>,
+              to: objName1 
+            },
+            {
+              sym: ("2")_,
+              to: objName2
+            }
+          ]
+        }
+      }
+    }
+    
+    //Native Hydra Objects
+    {
+      objName1:{
+        type: "Class",
+        props:{
+          size: "10",
+          desc: "some thing small"
+        },
+        methods:{
+          get_size()
+
+        }
+        
+      },
+      objName2:{
+        type: "Class",
+        props:{
+          size: "14",
+          desc: "something strong"
+        },
+        methods:{
+          get_strength()
+        }
+      },
+      objName3:{
+        type: "Class",
+        props:{
+          size: "18",
+          desc: "something big"
+        },
+        methods:{
+          get_weight()
+        }
+      }
+      
+    }
