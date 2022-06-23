@@ -135,7 +135,3 @@
       }
       
     }
-    
-    
-
-![Screenshot from 2022-06-22 22-33-45](https://user-images.githubusercontent.com/107733608/175194777-b834b565-48e5-41f0-954b-d09f7683ef82.png)
