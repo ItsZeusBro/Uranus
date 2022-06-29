@@ -1,6 +1,6 @@
 # Uranus
-## Uranus is an Abstract Diagram Syntax which plugs in to Hydra.
-#### It produces UML diagrams in the Uranus Server and in Hydrarchy's Documentation if Hydrarchy's plugin is included. 
+## Uranus uses the Hydra Machine and Routine Abstraction to expose an Abstract Diagram Syntax which compliments your Hydra Computable Files.
+#### It produces abstract visual diagrams and sends them to Hydrarchy's Documentation. 
 
 ![94697398a57a8899bde53b63d9bb0a26](https://user-images.githubusercontent.com/107733608/174940420-f05fc3fd-460c-4811-884f-cf8fa736a0b6.jpg)
 
