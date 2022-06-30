@@ -1,5 +1,5 @@
 # Uranus
-## Uranus uses the Hydra Machine and Routine Abstraction to expose an Abstract Diagram Syntax which compliments your Hydra Computable Files.
+## Uranus is a Hydra Computable that takes in Hydra Files and Generates Hydra Abstraction Diagrams that can be sent to Hydrarchy Docs. You can also expose Uranus's syntax to Hydra Routines to customize the Diagrams.
 #### It produces abstract visual diagrams and sends them to Hydrarchy's Documentation. 
 
 ![94697398a57a8899bde53b63d9bb0a26](https://user-images.githubusercontent.com/107733608/174940420-f05fc3fd-460c-4811-884f-cf8fa736a0b6.jpg)
